@@ -4,12 +4,28 @@ server:
 ---
 
 spring:
+  #  SPRING_SESSION table doesn't exist 오류
+  #  https://stackoverflow.com/questions/49964443/java-spring-jdbc-spring-session-table-doesnt-exist
+  session:
+    jdbc:
+      initialize-schema: always
   profiles: default
   jpa:
+    #    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    #      ddl-auto: create
     properties:
       hibernate:
         show_sql: true
         format_sql: true
+  # DB 연결
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/recommend?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: Sweetime010!
   cloud:
     stream:
       kafka:
@@ -48,7 +64,7 @@ spring:
     stream:
       kafka:
         binder:
-          brokers: my-kafka:9092
+          brokers: localhost:9092
         streams:
           binder:
             configuration:
