@@ -1,6 +1,6 @@
-package conatus.domain;
+package conatus.domain.event.hobby;
 
-import conatus.domain.*;
+
 import conatus.infra.AbstractEvent;
 import java.util.Date;
 import java.util.Map;

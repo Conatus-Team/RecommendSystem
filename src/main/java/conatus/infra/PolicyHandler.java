@@ -1,12 +1,20 @@
 package conatus.infra;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import conatus.config.kafka.KafkaProcessor;
-import conatus.domain.*;
-import javax.naming.NameParser;
-import javax.naming.NameParser;
+
 import javax.transaction.Transactional;
+
+import conatus.domain.event.chatting.ChattingExited;
+import conatus.domain.event.group.*;
+import conatus.domain.group.*;
+import conatus.domain.event.hobby.HobbyRediagnosisRequested;
+import conatus.domain.event.hobby.MyHobbyRead;
+import conatus.domain.event.lecture.LectureDetailShown;
+import conatus.domain.event.lecture.LectureLiked;
+import conatus.domain.event.lecture.LectureSearched;
+import conatus.domain.entity.RecommendUserInfo;
+import conatus.domain.user.RecommendUserInfoRepository;
+import conatus.domain.event.user.SignedUp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.messaging.handler.annotation.Payload;

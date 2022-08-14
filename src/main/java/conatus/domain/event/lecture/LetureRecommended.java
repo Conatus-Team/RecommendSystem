@@ -1,8 +1,7 @@
-package conatus.domain;
+package conatus.domain.event.lecture;
 
-import conatus.domain.*;
+import conatus.domain.entity.RecommendUserInfo;
 import conatus.infra.AbstractEvent;
-import java.util.Date;
 import lombok.Data;
 
 @Data

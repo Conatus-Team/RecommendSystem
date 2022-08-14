@@ -1,17 +1,18 @@
-package conatus.domain;
+package conatus.domain.event.group;
 
-import conatus.domain.*;
+
 import conatus.infra.AbstractEvent;
 import java.util.Date;
 import java.util.Map;
 import lombok.Data;
 
 @Data
-public class GroupSearched extends AbstractEvent {
+public class GroupDetailShown extends AbstractEvent {
 
     private Long id;
     private Long userId;
-    private String keyword;
+    private Long groupId;
+    private String category;
     // keep
 
 }

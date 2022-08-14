@@ -1,22 +1,31 @@
-package conatus.domain;
+package conatus.domain.entity;
 
 import conatus.RecommendSystemApplication;
-import conatus.domain.GroupRecommended;
-import conatus.domain.HobbyDiagnosised;
-import conatus.domain.HobbyRecommended;
-import conatus.domain.HobbyRediagnosised;
-import conatus.domain.LetureRecommended;
-import conatus.domain.MyHobbyGot;
-import conatus.domain.UserInfoUpdated;
-import java.util.Date;
-import java.util.List;
+
 import javax.persistence.*;
+
+import conatus.domain.event.chatting.ChattingExited;
+import conatus.domain.event.group.*;
+import conatus.domain.event.hobby.*;
+import conatus.domain.event.lecture.LectureDetailShown;
+import conatus.domain.event.lecture.LectureLiked;
+import conatus.domain.event.lecture.LectureSearched;
+import conatus.domain.event.lecture.LetureRecommended;
+import conatus.domain.event.user.SignedUp;
+import conatus.domain.event.user.UserInfoUpdated;
+import conatus.domain.user.RecommendUserInfoRepository;
 import lombok.Data;
 
+import java.util.List;
+
 @Entity
-@Table(name = "RecommendUserInfo_table")
+@Table(name = "recommend_user_info")
 @Data
 public class RecommendUserInfo {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private Long userId;
 

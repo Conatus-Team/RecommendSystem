@@ -1,6 +1,6 @@
-package conatus.domain;
+package conatus.domain.user;
 
-import conatus.domain.*;
+import conatus.domain.entity.RecommendUserInfo;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
