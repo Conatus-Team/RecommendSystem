@@ -20,8 +20,8 @@ public class UserHobby extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    Long userId;
-
-    Long hobbyId;
-    String hobbyName;
+    private Long userId;
+ 
+    private Long hobbyId;
+    private String hobbyName;
 }

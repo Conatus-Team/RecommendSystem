@@ -21,7 +21,7 @@ public class TimePreference extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    Long userId;
-    Integer time;
-    Integer count;
+    private Long userId;
+    private Integer time;
+    private Integer count;
 }
