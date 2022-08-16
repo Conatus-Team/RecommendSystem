@@ -21,7 +21,7 @@ import java.util.List;
 @Entity
 @Table(name = "recommend_user_info")
 @Data
-public class RecommendUserInfo {
+public class RecommendUserInfo extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,21 +35,21 @@ public class RecommendUserInfo {
 
     private Long birth;
 
-    private List<Long> lectureId;
-
-    private List<Long> groupId;
-
-    private Long chattingTime;
-
-    private List<String> selectedHobby;
-
-    private List<String> recommendedHobby;
-
-    private List<String> diagnosisedHobby;
-
-    private List<String> searchedLecture;
-
-    private List<String> searchedGroup;
+//    private List<Long> lectureId;
+//
+//    private List<Long> groupId;
+//
+//    private Long chattingTime;
+//
+//    private List<String> selectedHobby;
+//
+//    private List<String> recommendedHobby;
+//
+//    private List<String> diagnosisedHobby;
+//
+//    private List<String> searchedLecture;
+//
+//    private List<String> searchedGroup;
 
     @PostPersist
     public void onPostPersist() {
