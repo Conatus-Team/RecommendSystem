@@ -26,6 +26,6 @@ public class Hobby extends BaseTimeEntity {
     private Integer place;
     private Integer compete;
     private Integer strategic;
-    private Integer together;
+    private Integer group;
     private Integer type;
 }

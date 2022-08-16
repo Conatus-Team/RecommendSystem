@@ -23,7 +23,7 @@ public class UserGroup extends BaseTimeEntity {
 
     private Long userId;
     private Long groupId;
-    private String category;
+    private String hobby;
     private Boolean registered;
     private Integer uploadPictures;
     private Integer uploadContent;
