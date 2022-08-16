@@ -11,24 +11,26 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name = "\"group\"")
 public class Group extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    String name;
-    Integer clicked;
-    Integer registered;
-    String hobby;
-    Integer recommended;
-    Integer posters;
-    Integer pictures;
-    Integer time;
-    Integer region;
+    private String name;
+    private Integer clicked;
+    private Integer registered;
+    private String hobby;
+    private Integer recommended;
+    private Integer posters;
+    private Integer pictures;
+    private Integer time;
+    private Integer region;
 }

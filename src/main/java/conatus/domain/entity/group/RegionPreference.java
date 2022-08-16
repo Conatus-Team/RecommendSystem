@@ -21,7 +21,7 @@ public class RegionPreference extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    Long userId;
-    Integer region;
-    Integer count;
+    private Long userId;
+    private Integer region;
+    private Integer count;
 }
