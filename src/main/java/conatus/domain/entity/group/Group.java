@@ -22,10 +22,10 @@ public class Group extends BaseTimeEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    String groupName;
+    String name;
     Integer clicked;
     Integer registered;
-    String category;
+    String hobby;
     Integer recommended;
     Integer posters;
     Integer pictures;

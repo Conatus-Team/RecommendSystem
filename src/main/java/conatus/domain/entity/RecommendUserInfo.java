@@ -35,21 +35,21 @@ public class RecommendUserInfo extends BaseTimeEntity {
 
     private Long birth;
 
-    private List<Long> lectureId;
-
-    private List<Long> groupId;
-
-    private Long chattingTime;
-
-    private List<String> selectedHobby;
-
-    private List<String> recommendedHobby;
-
-    private List<String> diagnosisedHobby;
-
-    private List<String> searchedLecture;
-
-    private List<String> searchedGroup;
+//    private List<Long> lectureId;
+//
+//    private List<Long> groupId;
+//
+//    private Long chattingTime;
+//
+//    private List<String> selectedHobby;
+//
+//    private List<String> recommendedHobby;
+//
+//    private List<String> diagnosisedHobby;
+//
+//    private List<String> searchedLecture;
+//
+//    private List<String> searchedGroup;
 
     @PostPersist
     public void onPostPersist() {
