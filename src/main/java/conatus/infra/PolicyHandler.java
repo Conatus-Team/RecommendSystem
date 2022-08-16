@@ -6,7 +6,6 @@ import javax.transaction.Transactional;
 
 import conatus.domain.event.chatting.ChattingExited;
 import conatus.domain.event.group.*;
-import conatus.domain.group.*;
 import conatus.domain.event.hobby.HobbyRediagnosisRequested;
 import conatus.domain.event.hobby.MyHobbyRead;
 import conatus.domain.event.lecture.LectureDetailShown;
