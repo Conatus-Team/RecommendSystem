@@ -26,6 +26,7 @@ public class Hobby extends BaseTimeEntity {
     private Integer place;
     private Integer compete;
     private Integer strategic;
+    @Column(name = "\"group\"")
     private Integer group;
     private Integer type;
 }
