@@ -21,7 +21,7 @@ import java.util.List;
 @Entity
 @Table(name = "recommend_user_info")
 @Data
-public class RecommendUserInfo {
+public class RecommendUserInfo extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
