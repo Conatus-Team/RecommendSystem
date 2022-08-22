@@ -22,4 +22,5 @@ public class UserLecture extends BaseTimeEntity {
     private Long lectureId;
     private Boolean isLiked;
     private Integer clickCount;
+    private String hobby;
 }
