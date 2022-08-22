@@ -24,4 +24,12 @@ public class UserHobby extends BaseTimeEntity {
  
     private Long hobbyId;
     private String hobbyName;
+
+
+    @Builder
+    public UserHobby(Long userId, Long hobbyId, String hobbyName){
+        this.userId = userId;
+        this.hobbyId = hobbyId;
+        this.hobbyName = hobbyName;
+    }
 }
