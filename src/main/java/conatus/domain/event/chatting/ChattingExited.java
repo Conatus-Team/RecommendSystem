@@ -18,4 +18,5 @@ public class ChattingExited extends AbstractEvent {
     private Long userId;
     // keep
 
+
 }
