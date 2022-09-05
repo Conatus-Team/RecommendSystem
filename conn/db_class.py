@@ -5,6 +5,7 @@ from sqlalchemy.dialects.mssql import TINYINT
 Base = declarative_base()
 
 
+# hobby
 class Hobby(Base):
     __tablename__ = 'hobby'
     id = Column(BIGINT,nullable=False, autoincrement=True, primary_key=True)
@@ -29,3 +30,15 @@ class UserHobby(Base):
     user_id = Column(BIGINT)
     hobby_id = Column(BIGINT)
     hobby_name = Column(String)
+
+
+# group
+
+
+# lecture
+# class UserHobby(Base):
+#     __tablename__ = 'user_hobby'
+#     id = Column(BIGINT,nullable=False, autoincrement=True, primary_key=True)
+#     user_id = Column(BIGINT)
+#     hobby_id = Column(BIGINT)
+#     hobby_name = Column(String)
