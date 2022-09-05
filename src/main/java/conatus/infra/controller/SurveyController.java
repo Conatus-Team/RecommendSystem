@@ -1,8 +1,8 @@
 package conatus.infra.controller;
 
 
-import conatus.domain.user.SurveyDto;
-import conatus.domain.service.SurveyService;
+import conatus.domain.entity.user.SurveyDto;
+import conatus.domain.service.user.SurveyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

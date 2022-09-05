@@ -1,24 +1,11 @@
-package conatus.domain.user;
-
-import conatus.RecommendSystemApplication;
+package conatus.domain.entity.user;
 
 import javax.persistence.*;
 
 import conatus.domain.entity.BaseTimeEntity;
-import conatus.domain.event.chatting.ChattingExited;
-import conatus.domain.event.group.*;
-import conatus.domain.event.hobby.*;
-import conatus.domain.event.lecture.LectureDetailShown;
-import conatus.domain.event.lecture.LectureLiked;
-import conatus.domain.event.lecture.LectureSearched;
-import conatus.domain.event.lecture.LetureRecommended;
-import conatus.domain.event.user.SignedUp;
-import conatus.domain.event.user.UserInfoUpdated;
-import conatus.domain.user.RecommendUserInfoRepository;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.List;
 
 @Entity
 @Table(name = "recommend_user_info")

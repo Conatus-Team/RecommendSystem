@@ -1,13 +1,13 @@
-package conatus.domain.service;
+package conatus.domain.service.user;
 
 import conatus.domain.entity.hobby.UserHobby;
 import conatus.domain.entity.hobby.UserHobbyType;
 import conatus.domain.entity.hobby.repository.HobbyRepository;
 import conatus.domain.entity.hobby.repository.UserHobbyRepository;
 import conatus.domain.entity.hobby.repository.UserHobbyTypeRepository;
-import conatus.domain.user.RecommendUserInfo;
-import conatus.domain.user.RecommendUserInfoRepository;
-import conatus.domain.user.SurveyDto;
+import conatus.domain.entity.user.RecommendUserInfo;
+import conatus.domain.entity.user.respository.RecommendUserInfoRepository;
+import conatus.domain.entity.user.SurveyDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
