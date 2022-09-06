@@ -4,6 +4,8 @@
 //
 //import javax.transaction.Transactional;
 //
+//import conatus.domain.entity.user.RecommendUserInfo;
+//import conatus.domain.entity.user.respository.RecommendUserInfoRepository;
 //import conatus.domain.event.chatting.ChattingExited;
 //import conatus.domain.event.group.*;
 //import conatus.domain.event.hobby.HobbyRediagnosisRequested;
@@ -11,8 +13,7 @@
 //import conatus.domain.event.lecture.LectureDetailShown;
 //import conatus.domain.event.lecture.LectureLiked;
 //import conatus.domain.event.lecture.LectureSearched;
-//import conatus.domain.user.RecommendUserInfo;
-//import conatus.domain.user.RecommendUserInfoRepository;
+//
 //import conatus.domain.event.user.SignedUp;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.cloud.stream.annotation.StreamListener;

@@ -23,8 +23,8 @@ public class UserGroup extends BaseTimeEntity {
 
     private Long userId;
     private Long groupId;
-    private String hobby;
-    private Boolean registered;
+    private String hobby; // 그룹의 카테고리
+    private Boolean registered; // 그룹들의 속성들
     private Integer uploadPictures;
     private Integer uploadContent;
     private Integer clicked;

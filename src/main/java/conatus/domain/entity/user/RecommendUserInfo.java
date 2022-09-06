@@ -1,24 +1,17 @@
-package conatus.domain.user;
-
-import conatus.RecommendSystemApplication;
+package conatus.domain.entity.user;
 
 import javax.persistence.*;
 
+import conatus.RecommendSystemApplication;
 import conatus.domain.entity.BaseTimeEntity;
-import conatus.domain.event.chatting.ChattingExited;
-import conatus.domain.event.group.*;
-import conatus.domain.event.hobby.*;
-import conatus.domain.event.lecture.LectureDetailShown;
-import conatus.domain.event.lecture.LectureLiked;
-import conatus.domain.event.lecture.LectureSearched;
-import conatus.domain.event.lecture.LetureRecommended;
-import conatus.domain.event.user.SignedUp;
-import conatus.domain.event.user.UserInfoUpdated;
-import conatus.domain.user.RecommendUserInfoRepository;
+import conatus.domain.entity.group.UserGroup;
+import conatus.domain.entity.group.repository.GroupRepository;
+import conatus.domain.entity.group.repository.RecommendedGroupRepository;
+import conatus.domain.event.group.GroupJoined;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(name = "recommend_user_info")
@@ -53,7 +46,7 @@ public class RecommendUserInfo extends BaseTimeEntity {
 //    private List<String> searchedLecture;
 //
 //    private List<String> searchedGroup;
-
+//
 //    @PostPersist
 //    public void onPostPersist() {
 //        LetureRecommended letureRecommended = new LetureRecommended(this);
@@ -104,27 +97,55 @@ public class RecommendUserInfo extends BaseTimeEntity {
 //        */
 //
 //    }
-//
-//    public static void updateUserInfo(GroupJoined groupJoined) {
-//        /** Example 1:  new item
-//        RecommendUserInfo recommendUserInfo = new RecommendUserInfo();
-//        repository().save(recommendUserInfo);
-//
-//        */
-//
-//        /** Example 2:  finding and process
-//
-//        repository().findById(groupJoined.get???()).ifPresent(recommendUserInfo->{
-//
-//            recommendUserInfo // do something
-//            repository().save(recommendUserInfo);
-//
-//
-//         });
-//        */
-//
-//    }
-//
+
+    public static void updateUserInfo(GroupJoined groupJoined) {
+        RecommendedGroupRepository recommendedGroupRepository = RecommendSystemApplication.applicationContext.getBean(
+                RecommendedGroupRepository.class
+        );
+
+        // 이미 있는 멤버인지
+        Optional<UserGroup> existMember = recommendedGroupRepository.findByGroupIdAndUserId(
+                groupJoined.getGroupId(),
+                groupJoined.getUserId()
+        );
+
+        if (existMember.isPresent()){
+//            return existMember.get();
+            // return null;
+        }
+        else {
+            // 그룹 가입
+            // TODO : "hobby, registered, uploadPictures, uploadContent, clicked" 값 builder에 추가하기
+            UserGroup newUserGroup = new UserGroup();
+            newUserGroup.builder()
+                    .userId(groupJoined.getUserId())
+                    .groupId(groupJoined.getGroupId())
+                    .build();
+
+
+        }
+
+
+
+        /** Example 1:  new item
+        RecommendUserInfo recommendUserInfo = new RecommendUserInfo();
+        repository().save(recommendUserInfo);
+
+        */
+
+        /** Example 2:  finding and process
+
+        repository().findById(groupJoined.get???()).ifPresent(recommendUserInfo->{
+
+            recommendUserInfo // do something
+            repository().save(recommendUserInfo);
+
+
+         });
+        */
+
+    }
+
 //    public static void updateUserInfo(GroupQuitted groupQuitted) {
 //        /** Example 1:  new item
 //        RecommendUserInfo recommendUserInfo = new RecommendUserInfo();

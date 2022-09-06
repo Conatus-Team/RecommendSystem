@@ -2,7 +2,7 @@ package conatus.infra;
 
 import javax.transaction.Transactional;
 
-import conatus.domain.user.RecommendUserInfoRepository;
+import conatus.domain.entity.user.respository.RecommendUserInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
