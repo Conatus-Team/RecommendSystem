@@ -3,6 +3,8 @@ package conatus.domain.middle;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import conatus.domain.entity.user.RecommendUserInfo;
+import conatus.domain.event.group.GroupJoined;
 import conatus.domain.event.user.SignedUp;
 import conatus.domain.service.user.UserService;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +30,19 @@ public class GetMiddleController {
 
     }
 
+    @PostMapping("/GroupJoined")
+    public void sendGroupJoined(@RequestBody GroupJoined groupJoined) {
+        if (!groupJoined.validate()) return;
+        GroupJoined event = groupJoined;
+        System.out.println(
+                "\n\n##### listener UpdateUserInfo : " +
+                        groupJoined.toJson() +
+                        "\n\n"
+        );
 
+        // Sample Logic //
+        RecommendUserInfo.updateUserInfo(event);
+    }
 
 
 }
