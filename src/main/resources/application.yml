@@ -27,7 +27,7 @@ server:
 spring:
   profiles: docker
   datasource:
-    url: ${lecture_database_url}
+    url: ${group_database_url}
     username: ${database_userid}
     password: ${database_password}
     driver-class-name: com.mysql.cj.jdbc.Driver
