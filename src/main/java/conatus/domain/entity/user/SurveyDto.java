@@ -1,4 +1,4 @@
-package conatus.domain.user;
+package conatus.domain.entity.user;
 
 import lombok.Builder;
 import lombok.Data;

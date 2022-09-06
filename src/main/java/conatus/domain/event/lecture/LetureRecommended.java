@@ -1,6 +1,6 @@
 package conatus.domain.event.lecture;
 
-import conatus.domain.user.RecommendUserInfo;
+import conatus.domain.entity.user.RecommendUserInfo;
 import conatus.infra.AbstractEvent;
 import lombok.Data;
 

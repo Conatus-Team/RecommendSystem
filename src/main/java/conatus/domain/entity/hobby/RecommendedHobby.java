@@ -27,6 +27,8 @@ public class RecommendedHobby extends BaseTimeEntity {
 //    private Hobby hobby;
 
     private Long hobbyId;
-    private String category;
+//    private String category;
+    private String hobby_name;
+
 
 }
