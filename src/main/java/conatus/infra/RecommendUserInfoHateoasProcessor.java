@@ -1,6 +1,6 @@
 package conatus.infra;
 
-import conatus.domain.entity.user.RecommendUserInfo;
+import conatus.domain.user.RecommendUserInfo;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelProcessor;
 import org.springframework.stereotype.Component;
