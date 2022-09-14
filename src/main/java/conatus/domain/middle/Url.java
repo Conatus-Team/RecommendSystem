@@ -23,6 +23,8 @@ public enum Url {
     CHATTING("http://3.34.172.89:8080" + "/chatting/connect_middle"),
     RECOMMEND("http://3.38.49.196:8080" + "/recommend/connect_middle"),
     MIDDLE("http://3.34.135.84:8080" + "/middle"),
+    WITHOUT_MIDDLE_GROUP("http://43.200.197.190:8080" + "/group/recommend"),
+    WITHOUT_MIDDLE_Lecture("http://13.209.29.237:8080" + "/lecture/recommend"),
 
     // Python
     PYTHON("http://13.125.24.24:8080"),
