@@ -30,6 +30,7 @@ public class PostMiddleService {
                 String.class // {반환 타입}
         );
 
+
         return response.toString();
     }
 }
