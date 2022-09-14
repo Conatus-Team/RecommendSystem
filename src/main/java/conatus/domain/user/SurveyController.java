@@ -29,9 +29,12 @@ public class SurveyController {
         System.out.println("===============================");
         System.out.println(surveyDto.toString());
 
+        // 설문 결과 저장
+        SurveyDto saved = surveyService.saveSurvey(surveyDto);
+        
         // 파이썬 서버로 부터 추천 취미, 추천 강의, 추천 그룹 저장
         pythonService.saveRecommendedItems(surveyDto.getUserId());
 
-        return surveyService.saveSurvey(surveyDto);
+        return saved;
     }
 }
